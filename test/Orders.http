@@ -1,0 +1,53 @@
+### Create Order with items
+POST http://localhost:4004/project-serice/Orders
+Content-Type: application/json
+
+{
+    "client" : "Test client",
+    "Items": [
+        {
+            "book": "book1",
+            "quantity": 4
+        },
+        {
+            "book": "book2",
+            "quantity": 5
+        },
+        {
+            "book": "book5",
+            "quantity": 7
+        }
+    ]
+}
+
+### Update Items of a order
+PATCH http://localhost:4004/project-serice/Orders/eef62942-c67c-4599-8ddc-6043aa84669a
+Content-Type: application/json
+
+{
+    "Items": [
+        {
+            "book": "book1"
+        },
+        {
+            "book": "book2",
+            "quantity": 7
+        }
+    ]
+}
+
+### Update Items of a order
+PUT http://localhost:4004/project-serice/Orders/eef62942-c67c-4599-8ddc-6043aa84669a
+Content-Type: application/json
+
+{
+    "Items": [
+        {
+            "book": "book2",
+            "quantity": 9
+        }
+    ]
+}
+
+### Delete Order
+DELETE http://localhost:4004/project-serice/Orders/eef62942-c67c-4599-8ddc-6043aa84669a

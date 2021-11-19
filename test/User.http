@@ -1,0 +1,36 @@
+### Get Users
+GET http://localhost:4004/project-serice/Users
+
+### Get User
+GET http://localhost:4004/project-serice/Users(47505b32-ce2c-4b2c-a5a3-9cb8ad25969a)
+CustomHeader: 123456
+
+### Create user
+POST http://localhost:4004/project-serice/Users
+Content-Type: application/json
+
+{
+    "name"  : "Jane doe",
+    "email" : "jane.doe@gmail.com",
+    "phone": "555-555-5555",
+    "gender": "Female",
+    "password": "123456",
+    "address_street": "8000 Avalon Blvd",
+    "address_city": "Alpharetta",
+    "address_state": "GA",
+    "address_zip": "30004",
+    "project_ID":"632c47b1-7828-4ead-b6aa-7af5f2a36c86" 
+}
+
+### Move user to another project
+POST http://localhost:4004/project-serice/moveUserToAnotherProject
+Content-Type: application/json
+
+{   "data" : {
+        "userToMove" : {"userId"    : "01307b9e-60ec-48d0-9006-642971d8f2ba"},
+        "projectId" : "7ff25e2f-b8a7-4586-9fb6-a1530d0e25ca"  
+    }
+}
+
+
+ ###"project_ID": "7a68de55-7048-419d-8694-bf340bcccb2e"

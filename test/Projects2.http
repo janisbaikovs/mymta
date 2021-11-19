@@ -1,0 +1,10 @@
+### Create project2
+POST http://localhost:4004/project-serice/Projects2
+Content-Type: application/json
+
+{
+    "test" : "test"
+}
+
+### Get project2
+GET http://localhost:4004/project-serice/Projects2
